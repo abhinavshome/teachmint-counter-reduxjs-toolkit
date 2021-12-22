@@ -1,4 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
+import { dec, inc } from "../store/counterSlice";
 
 const Counter = () => {
     const dispatch = useDispatch();
@@ -6,8 +7,8 @@ const Counter = () => {
     return (
         <div>
             Count: {count} <br/>
-            <button onClick={() => dispatch({type: 'INC'})}>+</button>
-            <button onClick={() => dispatch({type: 'DEC'})}>-</button>
+            <button onClick={() => dispatch(inc())}>+</button>
+            <button onClick={() => dispatch(dec())}>-</button>
         </div>
         
     );
